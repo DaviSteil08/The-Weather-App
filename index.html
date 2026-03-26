@@ -1,40 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Weather App</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <canvas id="fx"></canvas>
 
-    <div class="app">
-    <div class="header">
-        <input id="cityInput" placeholder="Cidade">
-        <button onclick="getWeather()">Buscar</button>
-    </div>
+    <main class="app">
 
-    <div id="suggestions" class="suggestions"></div>
+    <header class="header">
+      <div class="search">
+        <input 
+          id="cityInput" 
+          type="text"
+          placeholder="Buscar cidade..."
+          autocomplete="off"
+          aria-label="Buscar cidade"
+        >
+        <button id="searchBtn">Buscar</button>
+      </div>
 
-    <div class="center">
+      <div id="suggestions" class="suggestions"></div>
+    </header>
+
+    <section class="center">
         <div id="icon" class="icon">☀️</div>
         <div id="temp" class="temp">°C</div>
         <div id="city" class="city"></div>
-    </div>
+    </section>
 
-    <div class="cards">
-        <div class="card">💧 <span id="humidity">%</span><br>Umidade</div>
-        <div class="card">💨 <span id="wind">km/h</span><br>Vento</div>
-        <div class="card">☁️ <span id="cloud">%</span><br>Nuvens</div>
-        <div class="card">🌧️ <span id="rain">%</span><br>Chuva</div>
-    </div>
+    <!-- INFORMAÇÕES -->
+    <section class="cards">
+      <div class="card">
+        💧 <span id="humidity">%</span>
+        <small>Umidade</small>
+      </div>
 
-    <div class="chart">
+      <div class="card">
+        💨 <span id="wind"> km/h</span>
+        <small>Vento</small>
+      </div>
+
+      <div class="card">
+        ☁️ <span id="cloud">%</span>
+        <small>Nuvens</small>
+      </div>
+
+      <div class="card">
+        🌧️ <span id="rain">%</span>
+        <small>Chuva</small>
+      </div>
+    </section>
+
+    <section class="chart">
         <canvas id="chart"></canvas>
-    </div>
+    </section>
     
-    </div>
+    <section class="favorites" id="favorites"></section>
+
+    </main>
 </body>
 </html>
