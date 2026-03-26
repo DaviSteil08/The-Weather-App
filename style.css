@@ -48,6 +48,7 @@ button:hover {
 /* AUTOCOMPLETE */
 .suggestions {
   position: absolute;
+  z-index: 20;
   top: 60px;
   width: 100%;
   background: rgba(0,0,0,0.7);
@@ -119,7 +120,19 @@ button:hover {
 
 canvas {
   position: fixed;
+  z-index: 0;
   top: 0;
   left: 0;
   pointer-events: none;
+}
+
+/* Garante que o ícone fique abaixo */
+.header {
+  position: relative;
+  z-index: 10;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
 }
