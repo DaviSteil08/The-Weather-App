@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <canvas id="fx"></canvas>
+
+    <div class="app">
+    <div class="header">
+        <input id="cityInput" placeholder="Cidade">
+        <button onclick="getWeather()">Buscar</button>
+    </div>
+
+    <div id="suggestions" class="suggestions"></div>
+
+    <div class="center">
+        <div id="icon" class="icon">☀️</div>
+        <div id="temp" class="temp">°C</div>
+        <div id="city" class="city"></div>
+    </div>
+
+    <div class="cards">
+        <div class="card">💧 <span id="humidity">%</span><br>Umidade</div>
+        <div class="card">💨 <span id="wind">km/h</span><br>Vento</div>
+        <div class="card">☁️ <span id="cloud">%</span><br>Nuvens</div>
+        <div class="card">🌧️ <span id="rain">%</span><br>Chuva</div>
+    </div>
+
+    <div class="chart">
+        <canvas id="chart"></canvas>
+    </div>
+    
+    </div>
+</body>
+</html>
